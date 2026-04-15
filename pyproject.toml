@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "ai-career-advisor"
+version = "0.1.0"
+description = "AI-powered career advisor using RAG and LLM"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+# Core dependencies
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+
+# LLM & Embeddings - IBM watsonx.ai
+ibm-watsonx-ai = "^1.0.0"  # IBM watsonx.ai SDK for Granite models
+ibm-watson-machine-learning = "^1.0.0"  # Alternative SDK
+ibm-cos-sdk = "^2.13.0"  # IBM Cloud Object Storage
+tiktoken = "^0.6.0"  # Token counting
+
+# Vector stores (choose one or support multiple)
+pymilvus = "^2.3.0"  # Your experience with Milvus
+faiss-cpu = "^1.7.4"  # Lightweight alternative
+chromadb = "^0.4.22"  # Easy to start with
+
+# Document processing
+docling = "^2.0.0"  # Advanced PDF to Markdown conversion
+pypdf = "^4.0.0"
+python-docx = "^1.1.0"
+markdown = "^3.5.0"
+beautifulsoup4 = "^4.12.0"
+
+# CLI
+typer = {extras = ["all"], version = "^0.9.0"}
+rich = "^13.7.0"
+
+# Utilities
+python-dotenv = "^1.0.0"
+httpx = "^0.26.0"
+tenacity = "^8.2.0"
+
+# Observability
+structlog = "^24.1.0"
+prometheus-client = "^0.19.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.0"
+pytest-cov = "^4.1.0"
+black = "^24.1.0"
+ruff = "^0.2.0"
+mypy = "^1.8.0"
+ipython = "^8.20.0"
+
+[tool.poetry.scripts]
+career-advisor = "src.cli.main:app"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
