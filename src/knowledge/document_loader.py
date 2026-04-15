@@ -302,5 +302,3 @@ class DocumentLoader:
         
         # TODO: Implement directory loading
         return []
-
-# Made with Bob

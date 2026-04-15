@@ -183,5 +183,3 @@ class EmbeddingService:
         """
         logger.debug("Generating query embedding", query=query)
         return self.embed_text(query)
-
-# Made with Bob

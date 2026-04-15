@@ -243,5 +243,3 @@ Question: {query}
 
 Please provide a helpful answer:"""
         return prompt
-
-# Made with Bob

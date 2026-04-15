@@ -210,5 +210,3 @@ class GraniteLLMClient:
         """
         # Simple approximation: ~4 characters per token
         return len(text) // 4
-
-# Made with Bob

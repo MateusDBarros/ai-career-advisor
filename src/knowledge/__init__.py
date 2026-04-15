@@ -11,5 +11,3 @@ __all__ = [
     "DocumentType",
     "DocumentChunk",
 ]
-
-# Made with Bob

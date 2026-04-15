@@ -329,5 +329,3 @@ class DocumentChunker:
         """
         # TODO: Implement section-based chunking
         return self._chunk_by_tokens(text)
-
-# Made with Bob

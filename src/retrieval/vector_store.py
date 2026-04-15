@@ -322,4 +322,3 @@ class MilvusVectorStore:
         except Exception as e:
             logger.error("Failed to close connection", error=str(e))
 
-# Made with Bob

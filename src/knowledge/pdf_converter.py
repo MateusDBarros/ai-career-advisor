@@ -152,4 +152,3 @@ class PDFToMarkdownConverter:
         
         return results
 
-# Made with Bob

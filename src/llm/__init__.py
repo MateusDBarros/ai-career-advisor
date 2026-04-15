@@ -4,5 +4,3 @@ from .client import GraniteLLMClient
 from .prompts import PromptTemplate, SystemPrompts
 
 __all__ = ["GraniteLLMClient", "PromptTemplate", "SystemPrompts"]
-
-# Made with Bob

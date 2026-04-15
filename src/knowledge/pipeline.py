@@ -310,5 +310,3 @@ class DocumentProcessingPipeline:
         """Close all connections."""
         logger.info("Closing pipeline connections")
         self.vector_store.close()
-
-# Made with Bob
